@@ -1,13 +1,14 @@
 import React from "react";
-import sunny from "../assets/Sunny.svg";
+import iconSelector from "../helpers";
 
 function WeatherCard({ data }) {
+  const icon = iconSelector(data.forecast);
   return (
     <div className="card">
       <div className="img-container">
         <img
           className="card-img-top"
-          src={sunny}
+          src={icon}
           alt="Card image cap"
           id="icon"
         />
