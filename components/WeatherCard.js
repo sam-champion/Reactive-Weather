@@ -13,7 +13,7 @@ function WeatherCard({ data }) {
           id="icon"
         />
       </div>
-      <div class="card-body">
+      <div className="card-body">
         <h3 className="card-title">{data.city}</h3>
         <h5 className="card-text">{data.temperature}</h5>
         <h5 className="card-text">{data.forecast}</h5>

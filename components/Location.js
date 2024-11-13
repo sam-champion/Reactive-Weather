@@ -7,7 +7,7 @@ function Location({ data, location }) {
   return (
     <>
       <div className="card">
-        <h2>Your Locations Weather</h2>
+        <h2>Your Forecast</h2>
         <div className="img-container">
           <img
             className="card-img-top"
@@ -16,7 +16,7 @@ function Location({ data, location }) {
             id="icon"
           />
         </div>
-        <div class="card-body">
+        <div className="card-body">
           <h3 className="card-title">{locationData.city}</h3>
           <h5 className="card-text">{locationData.temperature}</h5>
           <h5 className="card-text">{locationData.forecast}</h5>
