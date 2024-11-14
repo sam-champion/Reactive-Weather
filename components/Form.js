@@ -1,19 +1,11 @@
 import React, { useState } from "react";
-const cities = require("../data");
 
 function Form({ setLocation }) {
   const [typedLocation, setTypedLocation] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (cities.some((city) => city.city === typedLocation)) {
-      setLocation(typedLocation);
-      setErrorMessage("");
-    } else {
-      setErrorMessage("Location not found");
-    }
-    setTypedLocation("");
+    setLocation(typedLocation);
   }
 
   return (
@@ -30,7 +22,6 @@ function Form({ setLocation }) {
         <button className="btn btn-primary" type="submit">
           Submit
         </button>
-        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </form>
     </div>
   );
